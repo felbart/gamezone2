@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root{
+    font-family: 'Inter', sans-serif;
+}
+
+@theme {
+  --font-display: "Bricolage Grotesque", sans-serif; 
+}
+
+.text-gradient{
+    @apply bg-gradient-to-r from-teal-500 to-indigo-400 inline-block text-transparent bg-clip-text;
+}
