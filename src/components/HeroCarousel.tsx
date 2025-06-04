@@ -26,7 +26,7 @@ export default function HeroCarousel() {
     <div
       className="h-screen"
     >
-      {games.map((game) => (
+      {games.map((game) => (  
         <div key={game.id}>
           <div
             className="relative h-screen w-full flex items-center justify-center text-white"
