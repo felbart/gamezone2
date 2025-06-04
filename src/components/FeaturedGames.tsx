@@ -38,13 +38,13 @@ export default function FeaturedGames() {
 
   return (
     <section className="py-16 px-6">
-  <div className="max-w-7xl mx-auto px-8 md:px-16">
-    <SectionTitle
-      subtitle="Descubra o que está bombando"
-      title="Jogos em Destaque"
-    />
-
-    <PlatformFilter selected={selected} onSelect={setSelected} />
+  <div className="mx-auto px-8 md:px-16">
+    <div className="flex flex-col md:flex-row items-center justify-center md:justify-between">
+      <SectionTitle
+        title="Jogos em Destaque"
+      />
+      <PlatformFilter selected={selected} onSelect={setSelected} />
+    </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {games.map((game) => (

@@ -1,9 +1,10 @@
 type SectionTitleProps = {
   title: string;
   subtitle?: string;
+  className?: string;
 };
 
-export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
+export default function SectionTitle({ title, subtitle, className }: SectionTitleProps) {
   return (
     <div className="text-center mb-10">
       {subtitle && (
@@ -11,7 +12,7 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
           {subtitle}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
+      <h2 className={`text-3xl md:text-4xl font-bold font-display uppercase ${className}`}>{title}</h2>
     </div>
   );
 }
